@@ -10,7 +10,7 @@ from libqtile import hook
 @hook.subscribe.startup
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call(home)
+    subprocess.run(script)
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -37,6 +37,9 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    # start specific apps
+    Key([mod], "w",              lazy.function(app_or_group("www", "waterfox"))),
+    Key([mod], "home",         lazy.spawn("kitty")),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -50,7 +53,6 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [mod],
         "f",
