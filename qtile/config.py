@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget
@@ -6,6 +7,17 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from libqtile import hook
+
+from libqtile.config import Screen
+import os.path
+...
+screens = [
+    Screen(
+        wallpaper=os.path.join(os.path.expanduser("~"), "wallpapers/wallhaven-9od3rx.jpg"),
+        wallpaper_mode="fill",     )
+   ]
+...
+
 
 @hook.subscribe.startup
 def autostart():
@@ -38,7 +50,7 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # start specific apps
-    Key([mod], "w",              lazy.function(app_or_group("www", "waterfox"))),
+    Key([mod], "w",              lazy.function(app("www", "waterfox"))),
     Key([mod], "home",         lazy.spawn("kitty")),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
