@@ -1,0 +1,21 @@
+set $wallpaper /home/kudlak/Pictures/Wallpaper/wallhaven-9oozpx.png
+
+set $background #040404
+set $foreground #efcdc4
+
+set $color0 #040404
+set $color1 #3D66B8
+set $color2 #A3728C
+set $color3 #FC6A94
+set $color4 #389587
+set $color5 #3CA393
+set $color6 #4B9D99
+set $color7 #efcdc4
+set $color8 #a78f89
+set $color9 #3D66B8
+set $color10 #A3728C
+set $color11 #FC6A94
+set $color12 #389587
+set $color13 #3CA393
+set $color14 #4B9D99
+set $color15 #efcdc4

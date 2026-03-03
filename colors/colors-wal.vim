@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/kudlak/Pictures/Wallpaper/wallhaven-9oozpx.png"
+let background = "#040404"
+let foreground = "#efcdc4"
+let cursor     = "#efcdc4"
+
+" Colors
+let color0  = "#040404"
+let color1  = "#3D66B8"
+let color2  = "#A3728C"
+let color3  = "#FC6A94"
+let color4  = "#389587"
+let color5  = "#3CA393"
+let color6  = "#4B9D99"
+let color7  = "#efcdc4"
+let color8  = "#a78f89"
+let color9  = "#3D66B8"
+let color10 = "#A3728C"
+let color11 = "#FC6A94"
+let color12 = "#389587"
+let color13 = "#3CA393"
+let color14 = "#4B9D99"
+let color15 = "#efcdc4"
